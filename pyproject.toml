@@ -1,5 +1,5 @@
 [project]
-name = "tehlug-tlg-bot"
+name = "tehlug-bot"
 version = "0.1.0"
 description = "Telegram bot for Tehran Linux User Group Q&A system"
 readme = "README.md"

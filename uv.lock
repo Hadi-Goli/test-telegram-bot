@@ -376,7 +376,7 @@ asyncio = [
 ]
 
 [[package]]
-name = "tehlug-tlg-bot"
+name = "tehlug-bot"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
