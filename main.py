@@ -30,11 +30,6 @@ def main():
     else:
         print("Proxy mode: disabled (ignoring *_PROXY environment variables)")
 
-    async def post_init(application: Application):
-        from bot import db
-        await db.init_db()
-        print("Database initialized.")
-
     def build_application(trust_env: bool) -> Application:
         """Create an Application configured with or without env-based proxies."""
         httpx_kwargs = {"trust_env": trust_env}
@@ -45,7 +40,6 @@ def main():
             .token(token)
             .request(request)
             .get_updates_request(request)
-            .post_init(post_init)
             .build()
         )
         setup_handlers(app)
